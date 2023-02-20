@@ -9,30 +9,31 @@
 1. Creating your anaconda environment
    1. Open Anaconda Prompt.
    2. Enter the following line of code to create the environment to be used for selenium. In this case, we will name the environment `selenium`.
-   >conda create --name selenium python==3.9
-   3. Press enter once you are done to create the environment.
-   4. Verify if the environment `selenium` has been created by entering the following line of code in the console.
-   >conda env list
-   5. Once you have confirmed that the environment is created, use the following line of code to activate the environment.
-   >conda activate selenium
-   6. Install the following commonly used packages in your environment after activating selenium. Please run the following line by line. Ensure you are currently in the `selenium` environment.
+   ```
+   conda create --name selenium python==3.9
+    ```
+   4. Press enter once you are done to create the environment.
+   5. Verify if the environment `selenium` has been created by entering the following line of code in the console.
+   ```
+   conda env list
+   ```
+   8. Once you have confirmed that the environment is created, use the following line of code to activate the environment.
+   ```
+   conda activate selenium
+   ```
+   7. Install the following commonly used packages in your environment after activating selenium. Please run the following line by line. Ensure you are currently in the `selenium` environment.
    ![Image example of being in `selenium` environment](https://github.com/tingxiao88/Get-Start-with-Selenium/raw/main/readme_assets/conda_activate_selenium.png)
-   > pip install selenium
-   > 
-   > pip install behave
-   > 
-   > pip install numpy
-   > 
-   > pip install pandas
-   > 
-   > pip install beautifulsoup4
-   > 
-   > pip install lxml
-   > 
-   > pip install requests
-   > 
-   > pip install jupyter
-   7. Now, add the anaconda environment selenium to Pycharm. You may do this after opening a local copy of this project.
+   ```
+   pip install selenium
+   pip install behave
+   pip install numpy
+   pip install pandas
+   pip install beautifulsoup4
+   pip install lxml
+   pip install requests
+   pip install jupyter
+   ```
+   8. Now, add the anaconda environment selenium to Pycharm. You may do this after opening a local copy of this project.
       1. Open PyCharm IDE, then head over to File > Settings.
       ![Image example of navigating to Settings](https://github.com/tingxiao88/Get-Start-with-Selenium/raw/main/readme_assets/pycharm_setting.png)
       2. Click on Project:..., then click on Python Interpreter.
