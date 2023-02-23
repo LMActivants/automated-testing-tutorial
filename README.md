@@ -44,6 +44,8 @@
       ![Image example of applying the changes](https://github.com/tingxiao88/Get-Start-with-Selenium/raw/main/readme_assets/pycharm_setting_4.png)
    9. To ensure that our IDE can also register `.ini` file types that store our configurations, we will also need to do some configurations for `File Types`. Under the `Editor` dropdown, select `File Types` followed by `Buildout.config`  in the list of recognized file types. Press the `+` button and key `*.ini`. Press OK and Apply the changes.
       ![Image example of updating file types for .ini files](https://i.imgur.com/YwJ2lBP.png)
+   10. We will now download `Gherkin` to allow our IDE to register `.feature` file types. Go to `Plugins`. With the `Marketplace` tab selected, search for `Gherkin` and install it.
+      ![Image example of downloading Gherkin plugin](https://i.imgur.com/xRbMhhB.png)
 
 ## Setting up chromedriver
 1. Check your current Chrome browser version so that we will know which `chromedriver` to install.
