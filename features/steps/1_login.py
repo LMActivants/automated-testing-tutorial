@@ -1,8 +1,8 @@
 import time, os, sys
-from behave import when, then, step
+from behave import given, when, then, step
 sys.path.append(os.path.join(os.path.dirname(__file__),'../'))
 
-@when("I go to login page '{url}'")
+@given("I am in login page '{url}'")
 def i_go_to_login_page(context, url):
     context.helperfunc.open(url)
     context.helperfunc.maximize()
