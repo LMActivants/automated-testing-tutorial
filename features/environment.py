@@ -1,10 +1,12 @@
 import os, sys
+import logging
 from configparser import ConfigParser
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 from helpers.helper_web import get_browser
 
 def before_all(context):
+    print("Executing before all")
     config = ConfigParser()
     thisfolder = os.path.dirname(os.path.abspath(__file__))
     initfile = os.path.join(thisfolder, 'behave.ini')
@@ -14,6 +16,12 @@ def before_all(context):
     helper_func = get_browser(config.get('Environment', 'Browser'))
     context.helperfunc = helper_func
 
+def before_feature(context, feature):
+    print("Before feature\n")
+    # Create logger
+    context.logger = logging.getLogger('automation_tests')
+    context.logger.setLevel(logging.DEBUG)
 
 def after_all(context):
+    print("Executing after all")
     context.helperfunc.close()
