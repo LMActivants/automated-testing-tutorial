@@ -2,9 +2,9 @@ import time, os, sys
 from behave import when, then, step
 sys.path.append(os.path.join(os.path.dirname(__file__),'../'))
 
-@when('I go to login page')
-def i_go_to_login_page(context):
-    context.helperfunc.open('https://goatocr.com/')
+@when("I go to login page '{url}'")
+def i_go_to_login_page(context, url):
+    context.helperfunc.open(url)
     context.helperfunc.maximize()
 
 @when("I key in my email address '{email}'")
