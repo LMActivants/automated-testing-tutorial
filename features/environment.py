@@ -6,11 +6,12 @@ from helpers.helper_web import get_browser
 
 def before_all(context):
     config = ConfigParser()
-    my_file = (os.path.join(os.getcwd(), 'behave.ini'))
-    config.read(my_file)
+    thisfolder = os.path.dirname(os.path.abspath(__file__))
+    initfile = os.path.join(thisfolder, 'behave.ini')
+    config.read(initfile)
 
     # Reading the browser type from the configuration file
-    helper_func = get_browser('chrome')
+    helper_func = get_browser(config.get('Environment', 'Browser'))
     context.helperfunc = helper_func
 
 
